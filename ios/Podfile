@@ -8,6 +8,10 @@ target 'themall' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+  pod 'ReactNativeAdsFacebook', :path => '../node_modules/react-native-fbads'
+
+  pod 'react-native-fbsdk', :path => '../node_modules/react-native-fbsdk'
+
   target 'themallTests' do
     inherit! :complete
     # Pods for testing
