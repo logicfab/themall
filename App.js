@@ -64,17 +64,18 @@ function App() {
             adChoicePosition="bottomRight"
           />
         </View>
-        {/*<View style={{flex: 1}}>*/}
-        {/*  <AdMobBanner*/}
-        {/*    adSize="smartBannerLandscape"*/}
-        {/*    adUnitID={`${*/}
-        {/*      Platform.OS === 'ios'*/}
-        {/*        ? 'ca-app-pub-5170626630841467/8258831062'*/}
-        {/*        : 'ca-app-pub-5170626630841467/8258831062'*/}
-        {/*    }`}*/}
-        {/*    onAdFailedToLoad={(error) => console.error(error)}*/}
-        {/*  />*/}
-        {/*</View>*/}
+        <View style={{flex: 1}}>
+          <AdMobBanner
+            adSize="smartBannerLandscape"
+            // adUnitID={`${
+            //   Platform.OS !== 'ios'
+            //     ? 'ca-app-pub-5170626630841467/8258831062'
+            //     : 'ca-app-pub-5170626630841467/4724579037'
+            // }`}
+            adUnitID={'ca-app-pub-5170626630841467/4724579037'}
+            onAdFailedToLoad={(error) => console.error(error)}
+          />
+        </View>
       </SafeAreaView>
     </>
   );
