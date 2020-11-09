@@ -11,6 +11,8 @@ target 'themall' do
   pod 'ReactNativeAdsFacebook', :path => '../node_modules/react-native-fbads'
 
   pod 'react-native-fbsdk', :path => '../node_modules/react-native-fbsdk'
+  pod 'FBAudienceNetwork'
+  pod 'Google-Mobile-Ads-SDK'
 
   target 'themallTests' do
     inherit! :complete
