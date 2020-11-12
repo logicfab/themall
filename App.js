@@ -15,7 +15,7 @@ import NativeAdView from './src/components/NativeAdView';
 
 AdSettings.clearTestDevices();
 AdSettings.setLogLevel('debug');
-AdSettings.addTestDevice(AdSettings.currentDeviceHash);
+// AdSettings.addTestDevice(AdSettings.currentDeviceHash);
 
 const adsManager = new NativeAdsManager('718535598698803_718536412032055');
 
@@ -54,25 +54,16 @@ function App() {
             adChoicePosition="bottomRight"
           />
         </View>
-        <View
-          style={{
-            justifyContent: 'center',
-            backgroundColor: '#FFF',
-          }}>
-          <NativeAdView
-            adsManager={adsManager}
-            adChoicePosition="bottomRight"
-          />
-        </View>
+
         <View style={{flex: 1}}>
           <AdMobBanner
             adSize="smartBannerLandscape"
-            // adUnitID={`${
-            //   Platform.OS !== 'ios'
-            //     ? 'ca-app-pub-5170626630841467/8258831062'
-            //     : 'ca-app-pub-5170626630841467/4724579037'
-            // }`}
-            adUnitID={'ca-app-pub-5170626630841467/4724579037'}
+            adUnitID={`${
+              Platform.OS !== 'ios'
+                ? 'ca-app-pub-5170626630841467/8258831062'
+                : 'ca-app-pub-5170626630841467/4724579037'
+            }`}
+            // adUnitID={'ca-app-pub-5170626630841467/4724579037'}
             onAdFailedToLoad={(error) => console.error(error)}
           />
         </View>
